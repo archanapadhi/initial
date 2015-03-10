@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Display Candidate</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<!--Bonus Task 2 : view to display Candidates from the DB-->
+<body>
+	<h1>Here are the candidate's details</h1>
+    <p th:text="'id ' + ${candidate.id}" />
+    <p th:text="'First Name: ' + ${candidate.firstName}" />
+    <p th:text="'Last Name: ' + ${candidate.lastName}" />
+    <p th:text="'Experience: ' + ${candidate.experience}" />
+    <p th:text="'Contact No: ' + ${candidate.contactNo}" />	
+    <a href="/searchcandidate">Find a Candidate by Id</a>
+    <a href="/addcandidate">Add another candidate</a>
+    <a href="/showall">Show all candidates</a>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handing Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<!--Task 4 : view to display the custom message-->
+<body>
+	<h1>Result</h1>
+    <p th:text="'greeting: ' + ${greeting}" />
+    <a href="/customgreeting">Submit another message</a>
+</body>
+</html>

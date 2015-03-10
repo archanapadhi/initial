@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Display Candidate</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<!--Bonus Task 2 : view to display all the Candidates from the DB-->
+<body>
+	<h1>Candidates</h1>
+	    <table>
+	      <tr>
+	        <th>Id</th>
+	        <th>First name</th>
+	        <th>Last name</th>
+	        <th>Experience</th>
+	        <th>Contact No</th>
+	      </tr>
+	      <tr th:each="con  : ${candidates}">
+	        <td th:text="${con.id}"></td>
+	        <td th:text="${con.firstName}"></td>
+	        <td th:text="${con.lastName}"></td>
+	        <td th:text="${con.experience}"></td>
+            <td th:text="${con.contactNo}"></td>
+	      </tr>
+	    </table>
+</body>
+</html>

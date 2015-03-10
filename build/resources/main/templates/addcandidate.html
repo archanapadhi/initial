@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Candidate</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<!--Bonus Task 2 : view to add Candidates for saving to the DB-->
+<body>
+	<h1>Form</h1>
+    <form action="#" th:action="@{/addcandidate}" th:object="${candidate}" method="post">    
+        <p>First Name: <input type="text" th:field="*{firstName}" /></p>
+        <p>Last Name: <input type="text" th:field="*{lastName}" /></p>
+        <p>Experience: <input type="text" th:field="*{experience}" /></p>
+        <p>Contact No: <input type="text" th:field="*{contactNo}" /></p>
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+</body>
+</html>

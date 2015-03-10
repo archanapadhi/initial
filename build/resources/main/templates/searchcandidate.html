@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Retrieve Candidate</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<!--Bonus Task 2 : view that takes an ID to be searched from the DB-->
+<body>
+	<h1>Please Enter a Valid Candidate ID!</h1>
+    <form action="#" th:action="@{/searchcandidate}" th:object="${candidate}" method="post">    
+        <p>ID: <input type="text" th:field="*{id}" /></p>
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handing Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<!--Task 4 : view to add custom greeting via a form-->
+<body>
+	<h1>Form</h1>
+    <form action="#" th:action="@{/customgreeting}" th:object="${customgreeting}" method="post">    
+        <p>Message: <input type="text" th:field="*{greeting}" /></p>
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+</body>
+</html>
